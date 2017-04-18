@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="dd_refresh_content" type="id"/>
+    <item name="dd_refresh_header" type="id"/>
+    <item name="dd_refresh_footer" type="id"/>
+
+</resources>
