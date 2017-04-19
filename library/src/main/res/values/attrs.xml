@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DdRefreshLayout">
+
+        <attr name="dd_pull_critical" format="integer"/>
+        <attr name="dd_load_critical" format="integer"/>
+
+    </declare-styleable>
+
+</resources>
