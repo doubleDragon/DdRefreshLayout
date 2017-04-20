@@ -28,6 +28,12 @@ public class TestAdapter extends RecyclerView.Adapter{
         }
     }
 
+    public void add(String item) {
+        int position = this.data.size();
+        this.data.add(item);
+        this.notifyItemInserted(position);
+    }
+
     public void addAll(List<String> list) {
         if(list == null || list.isEmpty()) {
             return;

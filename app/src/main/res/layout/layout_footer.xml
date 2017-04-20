@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<View xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wsl.library.widget.demo.FooterView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dd_refresh_footer"
     android:layout_width="match_parent"
     android:layout_height="100dp"
+    android:gravity="center"
     android:background="#ff0"
-    android:orientation="vertical">
-
-</View>
+    />

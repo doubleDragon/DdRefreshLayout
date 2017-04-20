@@ -3,8 +3,8 @@
 
     <declare-styleable name="DdRefreshLayout">
 
-        <attr name="dd_pull_critical" format="integer"/>
-        <attr name="dd_load_critical" format="integer"/>
+        <attr name="dd_pull_trigger_height" format="integer"/>
+        <attr name="dd_load_trigger_height" format="integer"/>
 
     </declare-styleable>
 

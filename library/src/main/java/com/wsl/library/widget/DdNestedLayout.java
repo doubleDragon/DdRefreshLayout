@@ -69,6 +69,15 @@ public class DdNestedLayout extends ViewGroup implements NestedScrollingParent {
         return mHeaderHeight;
     }
 
+    View getHeaderView(){
+        return mHeaderView;
+    }
+
+    View getFooterView(){
+        return mFooterView;
+    }
+
+
     public boolean isNestedScrollStart() {
         return mNestedScrollStart;
     }

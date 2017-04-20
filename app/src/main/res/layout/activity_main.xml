@@ -7,6 +7,7 @@
     tools:context="com.wsl.library.widget.demo.MainActivity">
 
     <com.wsl.library.widget.DdRefreshLayout
+        android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
