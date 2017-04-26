@@ -135,12 +135,13 @@ public class DdNestedLayout extends ViewGroup implements NestedScrollingParent {
 
     @Override
     public boolean onNestedFling(View target, float velocityX, float velocityY, boolean consumed) {
-        return true;
+//        super.onNestedFling(target, velocityX, velocityY, consumed);
+        return false;
     }
 
     @Override
     public boolean onNestedPreFling(View target, float velocityX, float velocityY) {
-        return true;
+        return false;
     }
 
     @Override
