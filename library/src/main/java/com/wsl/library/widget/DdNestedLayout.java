@@ -6,7 +6,6 @@ import android.support.v4.view.NestedScrollingParent;
 import android.support.v4.view.NestedScrollingParentHelper;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -117,7 +116,6 @@ public class DdNestedLayout extends ViewGroup implements NestedScrollingParent {
 
     @Override
     public void onNestedScroll(View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed) {
-        logD("onNestedScroll  [" + dxConsumed + "," + dyConsumed + "," + dxUnconsumed + "," + dyUnconsumed + "]");
         if (dyUnconsumed != 0) {
             //child没消耗完，refreshLayout接着处理
             int min, max;
@@ -146,7 +144,6 @@ public class DdNestedLayout extends ViewGroup implements NestedScrollingParent {
 
     @Override
     public void onStopNestedScroll(View child) {
-        logD("onStopNestedScroll ----------");
         mNestedScrollingParentHelper.onStopNestedScroll(child);
         mNestedScrollStart = false;
     }
@@ -163,7 +160,6 @@ public class DdNestedLayout extends ViewGroup implements NestedScrollingParent {
      * @param dy 移动的距离,而不是某个具体的点
      */
     void autoScroll(int dy) {
-        logD("autoScroll dy:" + dy);
         mScrollerHelper.autoScroll(dy);
     }
 
@@ -245,6 +241,8 @@ public class DdNestedLayout extends ViewGroup implements NestedScrollingParent {
     }
 
     private void logD(String text) {
-        Log.d(TAG, text);
+        if(DdConfig.DEBUG) {
+            android.util.Log.d(TAG, text);
+        }
     }
 }

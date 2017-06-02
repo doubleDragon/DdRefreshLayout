@@ -34,8 +34,6 @@ final class DdNestedScrollerHelper<Layout extends ViewGroup> {
     }
 
     final int scroll(int dy, int minOffset, int maxOffset) {
-        int current = getTopBottomOffsetForScrollingSibling();
-        Log.d(TAG, "scroll current[" + current + "]---dy[" + dy + "]");
         return setHeaderTopBottomOffset(getTopBottomOffsetForScrollingSibling() - dy, minOffset, maxOffset);
     }
 
@@ -56,8 +54,6 @@ final class DdNestedScrollerHelper<Layout extends ViewGroup> {
         final int curOffset = getTopAndBottomOffset();
         int consumed = 0;
 
-        Log.d(TAG, "setHeaderTopBottomOffset---curOffset: " + curOffset + "---newOffset: " + newOffset + "---minOffset: " + minOffset + "---maxOffset: " + maxOffset);
-
         if (curOffset >= minOffset && curOffset <= maxOffset) {
             // If we have some scrolling range, and we're currently within the min and max
             // offsets, calculate a new offset
@@ -77,7 +73,6 @@ final class DdNestedScrollerHelper<Layout extends ViewGroup> {
     }
 
     private void setTopAndBottomOffset(int offset) {
-        Log.d(TAG, "setTopAndBottomOffset : " + offset);
         mLayout.scrollTo(0, -offset);
     }
 
